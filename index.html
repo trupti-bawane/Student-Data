@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Forms</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+    <h1>Student Forms</h1>
+
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name" required pattern="[A-Za-z\s]{2,}" title="Please enter a valid name (alphabets only)">
+        <select id="gender" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="number" id="age" placeholder="Age" required min="10" max="100">
+        <input type="date" id="birthdate" placeholder="Birthdate" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <select id="department" required>
+            <option value="" disabled selected>Select Department</option>
+            <option value="Product Development">Product Development</option>
+            <option value="Customer Support">Customer Support</option>
+            <option value="Quality Assurance (QA)">Quality Assurance (QA)</option>
+            <option value="Human Resources">Human Resources</option>
+           </select><br>
+        <button type="submit">Add Student</button>
+    </form>
+</div>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Birthdate</th>
+                <th>Address</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="studentList">
+            <!-- Student records will be displayed here -->
+        </tbody>
+    </table>
+   
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="File1.js"></script>
+</body>
+</html>
